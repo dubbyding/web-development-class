@@ -1,30 +1,40 @@
 import { useState } from "react";
 import "./App.css";
+import Tiktak from "./TikTak";
 
 function App() {
-  const [state, setState] = useState(0);
+  const [tiktak, setTiktak] = useState(Array(9).fill(0));
+  const [isCross, setIsCross] = useState(false);
+
+  console.log(tiktak, isCross);
 
   return (
     <div>
-      Hello World!{state}
-      <button\
-        onClick={() =>
-          setState((prev) => {
-            return prev + 1;
-          })
-        }
+      <div
+        style={{
+          // Grid
+          display: "flex",
+          width: "80px",
+          flexWrap: "wrap",
+        }}
       >
-        Add One
-      </button>
-      <button
-        onClick={() =>
-          setState((prev) => {
-            return prev - 1;
-          })
-        }
-      >
-        Remove One
-      </button>
+        {tiktak.map(function (value, index) {
+          return (
+            <Tiktak
+              index={index}
+              value={value}
+              onClick={() => {
+                setTiktak((prevValue) => {
+                  const temp = [...prevValue];
+                  temp[index] = isCross ? 1 : -1;
+                  return temp;
+                });
+                setIsCross((prevValue) => !prevValue);
+              }}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
