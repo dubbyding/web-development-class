@@ -21,7 +21,6 @@ function (event) {
 - _On Click_ (onClick)
 - _On Change_ (onChange)
 - _On Submit_ (onSubmit)
-- _On Mouse Hover_ (onMouseHover)
 - _On Key Press_ (onKeyPress)
 
 ## How to submit form?
