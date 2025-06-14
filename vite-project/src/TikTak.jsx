@@ -1,7 +1,4 @@
-import { useState } from "react";
-
 function Tiktak(props) {
-  console.log(props.value);
   let value = "";
   if (props.value < 0) {
     value = "O";

@@ -166,3 +166,19 @@ function Counter() {
 ```
 
 This component shows a button that increases the count when clicked.
+
+## LifeCycle in React
+
+- componentDidMount
+- componentDidUnmount
+- componentDidUpdate
+
+### What is useEffect?
+
+_useEffect_
+_useMemo_
+_useCallback_
+
+### Problems that might occur when using useEffect
+
+### Completion of tiktak toe game
