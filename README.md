@@ -182,3 +182,9 @@ _useCallback_
 ### Problems that might occur when using useEffect
 
 ### Completion of tiktak toe game
+
+## To DO List
+
+### Layout plan
+
+### Component
